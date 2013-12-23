@@ -34,5 +34,8 @@ int main(int argc, char **argv)
     return 0;
 }
 
+// compile as this
 // gcc coro.c t.c -DCORO_ASM
+
+// run as this
 // time -p ./a.out 1000000000 8
