@@ -14,7 +14,6 @@ void coro_body(void *arg)
 
     while(1) {
       count++;
-//      printf("coro:%d, count:%ld\n", i, count);
       if(i == (INX - 1)) {
             coro_transfer(&ctx[i], &mainctx);
             continue;
@@ -41,18 +40,16 @@ int main(int argc, char **argv)
     while(1) {
         coro_transfer(&mainctx, &ctx[0]);
         count++;
- //       printf("maincoro:%ld\n", count);
         if(count > counter) {
             break;
         } 
-        //printf("maincoro:%d\n", count);
     }
     printf("switch count:%ld\n", count); 
     return 0;
 }
 
 // compile as this
-// gcc coro.c t.c -DCORO_ASM
+// gcc coro.c t.c -DCORO_ASM -DINX=100 / gcc coro.c t.c -DCORO_UCONTEXT -DINX=100
 
 // run as this
 // time -p ./a.out 1000000000 8
