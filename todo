@@ -1,0 +1,8 @@
+打算自己实现一个非抢占式的toy coroutine scheduler（协程当然只能是非抢占式的），大概会需要以下接口:
+
+create_sheduler,destory_sheduler
+
+create_coroutine,destory_coroutine
+
+coroutine_yield,coroutine_status
+
