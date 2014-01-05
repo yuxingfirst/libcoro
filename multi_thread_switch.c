@@ -88,3 +88,5 @@ int main(void)
     }
     return 0;
 }
+
+// gcc -DCORO_ASM coro.c multi_thread_switch.c -lpthread -o multithread
