@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "coro.h"
+#include "../libcoro/coro.h"
 
 coro_context ctx[INX], mainctx;
 
@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 }
 
 // compile as this
-// gcc coro.c t.c -DCORO_ASM -DINX=100 / gcc coro.c t.c -DCORO_UCONTEXT -DINX=100
+// gcc ../libcoro/coro.c t.c -DCORO_ASM -DINX=100 / gcc ../libcoro/coro.c t.c -DCORO_UCONTEXT -DINX=100
 
 // run as this
 // time -p ./a.out 1000000000 8

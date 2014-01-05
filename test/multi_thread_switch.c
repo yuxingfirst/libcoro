@@ -1,4 +1,4 @@
-#include "coro.h"
+#include "../libcoro/coro.h"
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
